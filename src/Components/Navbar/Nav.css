@@ -1,0 +1,80 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  list-style: none !important;
+  text-decoration: none !important;
+}
+nav {
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+}
+
+.flipcard-color {
+  background-color: #2370f4;
+}
+.FLEX {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.logo img {
+  width: 80px;
+}
+.logo a {
+  position: relative;
+  top: -5px;
+  text-decoration: none;
+  display: block;
+  color: aliceblue;
+}
+#pink {
+  margin: 0px 3px;
+  text-decoration: none;
+  color: yellow;
+}
+
+.logo a img {
+  width: 5%;
+}
+.logo img a {
+  font-size: 1rem;
+}
+a:hover {
+  color: white !important;
+}
+.Flipcard-input input {
+  width: 25rem;
+
+  background-color: white;
+  border-radius: 10px;
+}
+.flipcard-Card button {
+  background-color: #2370f4;
+  border: none;
+  font-size: 1.2rem;
+  margin-left: -50px;
+}
+span {
+  margin: 0px;
+  font-size: 15px;
+}
+@media screen and (max-width: 680px) {
+  .Flipcard-input input {
+    width: 100%;
+    margin-left: -3rem;
+  }
+  #imglogo {
+    width: 50px;
+  }
+
+  .logo img {
+    width: 20px;
+  }
+
+  span {
+    font: 5px !important;
+  }
+}

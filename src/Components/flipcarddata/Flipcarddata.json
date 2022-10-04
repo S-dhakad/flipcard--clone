@@ -1,0 +1,268 @@
+[
+ { "id":30,
+        "title":" iPhone 11 ",
+        "price":"39,349",
+        "description":"The iPhone 11brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+          "image":"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662418953/Croma%20Assets/Communication/Mobiles/Images/230106_nxtpnk.png/mxw_1440,f_auto"
+
+
+    },
+    { "id":31,
+        "title":" iPhone 12 ",
+        "price":"49,349",
+        "description":"The iPhone 12 brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+          "image":"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662424527/Croma%20Assets/Communication/Mobiles/Images/229928_l1hqtz.png/mxw_1440,f_auto"
+
+
+    },
+     { "id":32,
+        "title":" iPhone 12 Max ",
+        "price":"149,349",
+        "description":"The iPhone 12 brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+          "image":"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662424508/Croma%20Assets/Communication/Mobiles/Images/229926_xrit8z.png/mxw_1440,f_auto"
+
+
+    },
+     { "id":32,
+        "title":" iPhone 13 ",
+        "price":"99,349",
+        "description":"The iPhone 13 brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+          "image":"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1664009609/Croma%20Assets/Communication/Mobiles/Images/243463_0_qtsxpd.png/mxw_1440,f_auto"
+
+
+    },
+    { "id":33,
+        "title":" iPhone 13 Max",
+        "price":"129,349",
+        "description":"The iPhone 13 Max brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+          "image":"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1664009555/Croma%20Assets/Communication/Mobiles/Images/243466_0_l5sk2v.png/mxw_1440,f_auto"
+
+
+    },
+
+
+
+
+
+    { "id":1,
+        "title":" realme C31 ",
+        "price":"9,349",
+        "description":"The realme C31 brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+          "image":"https://www.addmecart.com/wp-content/uploads/2021/11/sp50.2.jpg"
+
+
+    },
+     { "id":2,
+        "title":"Xiaomi 11i Hypercharge 5G ",
+        "price":"27,149",
+        "description":"The Xiaomi 11i Hypercharge 5G smartphone charges up to 50% in about 13 minutes, courtesy of a 4500 mAh gigantic battery that boasts a 67 W Turbo Charging capability. This way, you can simply relax and enjoy a stress-free user experience without clinging to the charging cord.e",
+   "image":"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662443823/Croma%20Assets/Communication/Mobiles/Images/247120_cfsjxm.png/mxw_1440,f_auto"
+
+
+    }
+
+    ,
+     { "id":3,
+        "title":" iPhone 14 Pro Max ",
+        "price":" 1,39,900.00",
+        "description":"iPhone 14 Pro Max brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662655662/Croma%20Assets/Communication/Mobiles/Images/261979_oq7vjv.png/mxw_1440,f_auto"
+
+
+    }
+    ,
+     { "id":4,
+        "title":" Apple Studio Display ",
+        "price":"9,349",
+        "description":"The Apple Studio Display brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://shop.unicornstore.in/uploads/images/medium/1ee3be17abb1ecf7f0c40165602dc2c9.jpeg"
+
+
+    },
+     { "id":5,
+        "title":" Mac Studio",
+        "price":"1,89,900.00",
+        "description":"TheMac Studiobrings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://shop.unicornstore.in/uploads/images/medium/25e81c5200ada2a786a0a8f6e907968b.jpeg"
+
+
+    },
+     { "id":6,
+        "title":"  Apple M1 Chip ",
+        "price":" 2,20,708.",
+        "description":"The Apple M1 Chip brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://shop.unicornstore.in/uploads/images/medium/10b2d4199b3507a84247f13613fe846e.jpg"
+
+
+    },
+     { "id":7,
+        "title":" Appler Watch ",
+        "price":" 89,900.00",
+        "description":"The Appler Watch brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://shop.unicornstore.in/uploads/images/medium/fdc45659b49eb2041b2a6fede3f75c0f.jpeg"
+
+
+    },
+     { "id":8,
+        "title":" Airpods pro ",
+        "price":"26,900.00",
+        "description":"The Airpods pro brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://shop.unicornstore.in/uploads/images/medium/5407038fa5e3992dd30bc6d023358656.jpeg"
+
+
+    },
+     { "id":9,
+        "title":" Airpods pro",
+        "price":"2,000",
+        "description":"The Airpods pro brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://shop.unicornstore.in/uploads/images/medium/MMTN2ZM_A.jpeg"
+
+
+    },
+     { "id":10,
+        "title":" AirTag",
+        "price":"10,900",
+        "description":"The AirTag brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://shop.unicornstore.in/uploads/images/medium/c72bbae797a026d1b1b781253c54bbf4.jpg"
+
+
+    },
+     { "id":11,
+        "title":" Apple TV 4K",
+        "price":"9,349",
+        "description":"The Apple TV 4K brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://shop.unicornstore.in/uploads/images/medium/33da73c1f4dcf5b8ba51830756c4a9df.jpg"
+
+
+    },
+     { "id":12,
+        "title":" iPad 9th Generation ",
+        "price":"90,349",
+        "description":"The iPad 9th Generation brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://shop.unicornstore.in/uploads/images/medium/fb76c05cee0feeb2e1d76ae667cd05f9.jpeg"
+
+
+    },
+     { "id":13,
+        "title":" SAMSUNG Refrigerators ",
+        "price":"9,349",
+        "description":"The SAMSUNG Refrigerators brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://images.samsung.com/is/image/samsung/p6pim/in/rf57a5232b1-tl/gallery/in-water-dispenser-convertible-freezer-rf57a5232b1-tl-436341113?$650_519_PNG$"
+
+
+    },
+     { "id":14,
+        "title":" SAMSUNG washing-machines ",
+        "price":"9,349",
+        "description":"The SAMSUNG washing-machines brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://images.samsung.com/is/image/samsung/p6pim/in/wd80t604dbx-tl/gallery/in-combo-wd80t604dbxtlnon-auto-dispense-wd80t604dbx-tl-383418765?$2052_1641_PNG$"
+
+
+    },
+    
+     { "id":16,
+        "title":" SAMSUNG washing-machines ",
+        "price":"19,349",
+        "description":"The SAMSUNG washing-machines brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://images.samsung.com/is/image/samsung/p6pim/in/ww65r20ekmw-tl/gallery/in-front-loading-washer-ww66r22ek0xtl-ww65r20ekmw-tl-425587870?$2052_1641_PNG$"
+
+
+    },
+     { "id":17,
+        "title":" SAMSUNG washing-machines ",
+        "price":"19,349",
+        "description":"TheSAMSUNG washing-machines brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://images.samsung.com/is/image/samsung/p6pim/in/wa80t4560bm-tl/gallery/in-top-loading-washer-wa75t4560fmtl-379732-wa80t4560bm-tl-511317859?$2052_1641_PNG$"
+
+
+    },
+     { "id":18,
+        "title":" SAMSUNG washing-machines ",
+        "price":"10,349",
+        "description":"The SAMSUNG washing-machines brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://images.samsung.com/is/image/samsung/in-top-loading-wa10t5260bv-wa10t5260bv-tl-frontblack-320891437?$2052_1641_PNG$"
+
+
+    },
+     { "id":19,
+        "title":" Air-conditioners ",
+        "price":"49,349",
+        "description":"The air-conditioners brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://images.samsung.com/is/image/samsung/p6pim/in/ar18bx4zawknna/gallery/in-ac-fast-cooling-414289-414289-ar18bx4zawknna-531075841?$684_547_PNG$"
+
+
+    },
+     { "id":20,
+        "title":" Air-conditioners ",
+        "price":"59,349",
+        "description":"The Air-conditioners brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://images.samsung.com/is/image/samsung/p6pim/in/ar12by4anwknna/gallery/in-windfree%E2%84%A2-ar9500t-408678-408678-ar12by4anwknna-531091135?$2052_1641_PNG$"
+
+
+    },
+     { "id":21,
+        "title":" Galaxy Tab ",
+        "price":"19,349",
+        "description":"The Galaxy Tab brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://images.samsung.com/is/image/samsung/p6pim/in/sm-x200nzaainu/gallery/in-galaxy-a8-sm-x200-sm-x200nzaainu-530635474?$684_547_PNG$"
+
+
+    },
+     { "id":22,
+        "title":" Galaxy Tab S6 ",
+        "price":"29,349",
+        "description":"The Galaxy Tab S6brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://images.samsung.com/is/image/samsung/p6pim/in/sm-p613nzaainu/gallery/in-galaxy-tab-s6-lite-p610-428695-sm-p613nzaainu-532944520?$1300_1038_PNG$"
+
+
+    },
+     { "id":23,
+        "title":" Galaxy Watch4 ",
+        "price":"9999",
+        "description":"The Galaxy Watch4  brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://images.samsung.com/is/image/samsung/p6pim/in/2108/gallery/in-galaxy-watch4-398879-sm-r870nzkainu-481111391?$1300_1038_PNG$"
+
+
+    },
+     { "id":24,
+        "title":" Galaxy Watch  ",
+        "price":"19,349",
+        "description":"The  Galaxy Watch brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://images.samsung.com/is/image/samsung/p6pim/in/2108/gallery/in-galaxy-watch4-398879-sm-r870nzsainu-481111404?$650_519_PNG$"
+
+
+    },
+     { "id":25,
+        "title":"  Galaxy Watch  ",
+        "price":"99,349",
+        "description":"The  Galaxy Watch brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://images.samsung.com/is/image/samsung/p6pim/in/2108/gallery/in-galaxy-watch4-398806-sm-r865fzdainu-481079649?$1300_1038_PNG$"
+
+
+    },
+     { "id":26,
+        "title":"Galaxy M13 ",
+        "price":"9,349",
+        "description":"The Galaxy M13 brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://images.samsung.com/is/image/samsung/p6pim/in/sm-m135fznpins/gallery/in-galaxy-m13-sm-m135-431575-sm-m135fznpins-533230571?$650_519_PNG$"
+
+
+    },
+     { "id":27,
+        "title":" Galaxy f13",
+        "price":"9,349",
+        "description":"The Galaxy f13 brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://images.samsung.com/is/image/samsung/p6pim/in/sm-e135fiddins/gallery/in-galaxy%C2%A0f13-4gb-sm-e135fiddins-532880446?$1300_1038_PNG$"
+
+
+    },
+     
+     { "id":28,
+        "title":" Galaxy ",
+        "price":"19,349",
+        "description":"The realme C31 brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://images.samsung.com/is/image/samsung/p6pim/in/sm-m536bzbeinu/gallery/in-galaxy-m53-5g-sm-m536-sm-m536bzbeinu-532180211?$2052_1641_PNG$"
+
+
+    }
+]
