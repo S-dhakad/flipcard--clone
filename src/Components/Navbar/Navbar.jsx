@@ -13,8 +13,9 @@ export default function Navbar() {
           <NavLink to="/">  <div className="logo mt-1 ">
             <img src="\assest\flipkart-plus.png" alt="Flipcard" id="imglogo" />
             <NavLink to="/">
-              <span> Explore</span>
-              <span id="pink">plus</span>
+              <li>  <span> Explore</span>
+                <span id="pink">plus</span>
+              </li>
               {/* <img src="\assest\plus.png" alt="plus" /> */}
             </NavLink>
           </div>
@@ -29,13 +30,13 @@ export default function Navbar() {
           </div>
 
           {/* <div className="flipcard-login">
-            <button type="button" class="btn-design">
+            <button type="button" className="btn-design">
               Login
             </button>
           </div> */}
 
           {/* <div className="flipcard-seller">
-            <button type="button" class="seller-design">
+            <button type="button" className="seller-design">
               Become a seller
             </button>
           </div> */}

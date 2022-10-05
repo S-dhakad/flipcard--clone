@@ -5,7 +5,11 @@ export default function Cardinformation() {
   const navigate = useNavigate();
   function handlesubmitdata(e) {
     e.preventDefault();
-    alert("hello");
+    window.scrollTo({
+      top: 0,
+      left: 100,
+      behavior: "smooth",
+    });
     navigate("/OTP");
   }
   return (
@@ -62,14 +66,13 @@ export default function Cardinformation() {
                   style={{ height: "350px" }}
                 >
                   <div className="form-group">
-                    <label for="cc-number" className="control-label">
+                    <label htmlFor="cc-number" className="control-label">
                       CARD NUMBER
                     </label>
                     <input
                       id="cc-number"
                       type="tel"
                       className="input-lg form-control cc-number"
-                      autocomplete="cc-number"
                       placeholder=" Card Number"
                       required
                     />
@@ -78,14 +81,13 @@ export default function Cardinformation() {
                   <div className="row">
                     <div className="col-md-6">
                       <div className="form-group">
-                        <label for="cc-exp" className="control-label">
+                        <label shtmlFor="cc-exp" className="control-label">
                           CARD EXPIRY
                         </label>
                         <input
                           id="cc-exp"
                           type="tel"
                           className="input-lg form-control cc-exp"
-                          autocomplete="cc-exp"
                           placeholder="Card Expiry"
                           required
                         />
@@ -94,14 +96,13 @@ export default function Cardinformation() {
 
                     <div className="col-md-6">
                       <div className="form-group">
-                        <label for="cc-cvc" className="control-label">
+                        <label htmlFor="cc-cvc" className="control-label">
                           CARD CVC
                         </label>
                         <input
                           id="cc-cvc"
                           type="tel"
                           className="input-lg form-control cc-cvc"
-                          autocomplete="off"
                           placeholder=" CARD CVC"
                           required
                         />
@@ -110,22 +111,24 @@ export default function Cardinformation() {
                   </div>
 
                   <div className="form-group">
-                    <label for="numeric" className="control-label">
+                    <label htmlFor="numeric" className="control-label">
                       CARD HOLDER NAME
                     </label>
-                    <input type="text" className="input-lg form-control" />
+                    <input
+                      type="tel"
+                      className="input-lg form-control"
+                      required
+                    />
                   </div>
 
                   <div className="form-group">
                     <button
                       className="Makepayment"
                       value="MAKE PAYMENT"
-                      type="button"
-                      className="Makepayment"
+                      type="submit"
                       style={{ fontSize: "0.8rem" }}
-                      onClick={() => handlesubmitdata()}
                     >
-                      MAKE PAYMENT{" "}
+                      MAKE PAYMENT
                     </button>
                   </div>
                 </form>
@@ -164,6 +167,3 @@ export default function Cardinformation() {
     </>
   );
 }
-// <option selected> select Your Card Type</option>
-//                 <option value="1">Credit Card</option>
-//                 <option value="2">Debit Card</option>

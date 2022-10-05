@@ -20,6 +20,11 @@ export default function Addres() {
     // Added information form
     function handlesubmitdata(e) {
         e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            left: 100,
+            behavior: 'smooth'
+        });
         navigate("/Payment");
     }
 
@@ -93,7 +98,6 @@ export default function Addres() {
                                     className="form-control"
                                     onChange={(e) => handleChange(e)}
                                     placeholder="Enter your Pin Code"
-                                    className="form-control"
                                     required
                                 />
                             </div>

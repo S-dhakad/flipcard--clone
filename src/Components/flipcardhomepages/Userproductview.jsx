@@ -29,8 +29,8 @@ export default function Userproductview() {
 
   return (
     <>
-      <div class="container-fluid">
-        <div class="row">
+      <div className="container-fluid">
+        <div className="row">
           {selected.map((product, index) => {
             return (
               <div

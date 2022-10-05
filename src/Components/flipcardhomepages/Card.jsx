@@ -15,10 +15,10 @@ export default function Card() {
     <>
       {" "}
       <div className="container">
-        <div class="row">
-          {selected.map((product) => {
+        <div className="row">
+          {selected.map((product, index) => {
             return (
-              <div className="cardremove" key={product.id}>
+              <div className="cardremove" key={index}>
                 <div className="cardimge">
                   <img src={product.image} alt="" />
                 </div>
@@ -28,11 +28,9 @@ export default function Card() {
                 </div>
                 <div className="cardbtn">
                   <NavLink to="/Addres">
-                    {" "}
                     <button className="BUYNOW"> BUY NOW</button>
                   </NavLink>
                   <button className="REMOVE" onClick={() => REMOVE(product.id)}>
-                    {" "}
                     REMOVE NOW
                   </button>
                 </div>

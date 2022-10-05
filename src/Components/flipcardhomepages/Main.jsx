@@ -68,7 +68,7 @@ export default function Main() {
 
             <div
                 id="carouselExampleCaptions"
-                class="carousel slide"
+                className="carousel slide"
                 data-bs-ride="carousel"
             >
                 <div className="carousel-indicators">
@@ -76,7 +76,7 @@ export default function Main() {
                         type="button"
                         data-bs-target="#carouselExampleCaptions"
                         data-bs-slide-to="0"
-                        class="active"
+                        className="active"
                         aria-current="true"
                         aria-label="Slide 1"
                     ></button>
@@ -144,12 +144,12 @@ export default function Main() {
                     <span className="visually-hidden">Next</span>
                 </button>
             </div>
-            <div class="container-fluid">
-                <div class="row">
+            <div className="container-fluid">
+                <div className="row">
                     {handlerapi.map((product, index) => {
                         return (
 
-                            <div class="col-xs-6 col-md-4 col-lg-3">
+                            <div className="col-xs-6 col-md-4 col-lg-3">
 
                                 <div className="card" key={index} >
                                     <img src={product.image} onClick={() => Adduserdata(product)} className="card-img-top imghandler rounded mx-auto d-block" alt="..." style={{ width: "100px" }} />

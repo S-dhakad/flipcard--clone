@@ -1,15 +1,34 @@
 import { useCallback, useEffect, useState } from "react";
+import Swal from 'sweetalert2';
+
 export default function OTP() {
     const [timer, setTimer] = useState(60);
+ 
+
     const timeOutCallback = useCallback(() => setTimer(currTimer => currTimer - 1), []);
+    function handlesubmitdata(e) {
+        e.preventDefault();
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Invalid OTP !',
+
+        })
+
+    }
+
+
+
 
     useEffect(() => {
         timer > 0 && setTimeout(timeOutCallback, 1000);
+
     }, [timer, timeOutCallback]);
 
     const resetTimer = function () {
         if (!timer) {
             setTimer(60);
+
         }
     };
 
@@ -37,15 +56,17 @@ export default function OTP() {
                     ><b>Enter the code we just sent on your phone</b>
                         <b className="text-color">+91 ******282</b>
                     </span>
-                    <form>
+                    <form onSubmit={handlesubmitdata}>
                         <div className="d-flex flex-row mt-5">
-                            <input type="text" className="form-control border-0 border-bottom border border-primary" autofocus="" required />
+                            <input type="text" className="form-control border-0 border-bottom border border-primary" autofocus="" placeholder="Enter the OTP  " required />
                         </div>
                         <div className="text-center mt-5">
 
-                            <span className="d-block mobile-text" id="countdown"> Not received your code? Resend code in {timer} Seconds</span>
-                            <span className="d-block mobile-text" id="resend" onClick={() => resetTimer()}>Resend Otp</span>
-                            <button type="button" class="btn btn-primary">verifly</button>
+                            {timer === 0 ?
+                                <span className="d-block mobile-text" id="resend" onClick={() => resetTimer()}>Resend Otp</span>
+                                : <span className="d-block mobile-text" id="countdown"> Not received your code? Resend code in {timer} Seconds</span>
+                            }
+                            <button type="submit" className="btn btn-primary">verifly</button>
                         </div>
                     </form>
                 </div>
