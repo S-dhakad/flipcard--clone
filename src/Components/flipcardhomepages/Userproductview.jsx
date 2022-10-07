@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 import mydata from "../flipcarddata/Flipcarddata.json";
-import { Addcard, Removefirst } from "../Store/Createdslice";
+import { Addcard, Removefirst, } from "../Store/Createdslice";
 import { useDispatch } from "react-redux";
 export default function Userproductview() {
   const navigate = useNavigate();
@@ -11,17 +11,23 @@ export default function Userproductview() {
   const selected = useSelector((state) => state.counter);
   const [handlerapi, sethandlerapi] = useState([]);
   const Adduserdata = (product) => {
+
     dispatch(Removefirst(product));
     dispatch(Addcard(product));
+
+
     window.scrollTo({
       top: 0,
       left: 100,
       behavior: 'smooth'
     });
+    return (product);
   };
+
   const Buynow = () => {
     navigate("/Addres");
   };
+
 
   useEffect(() => {
     sethandlerapi(mydata);
@@ -51,7 +57,7 @@ export default function Userproductview() {
                       <ul className="row gap-2">
                         <li className="col col-6 col-12">
                           {" "}
-                          <NavLink to="/Card">    <button className="btnaddcard">Add TO Card</button> </NavLink >
+                          <NavLink to="/Card">    <button className="btnaddcard" >Add TO Card</button> </NavLink >
                         </li>
                         <li className="col col-6 col-12">
                           <button className="btnbuy" onClick={() => Buynow()}>

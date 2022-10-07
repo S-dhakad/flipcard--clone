@@ -12,6 +12,7 @@ import Navbar from "./Components/Navbar/Navbar.jsx";
 import Footer from "./Components/Footer/Footer.jsx";
 import Card from "./Components/flipcardhomepages/Card.jsx";
 import OTP from "./Components/flipcardhomepages/OTP.jsx";
+import Loading from "./Components/flipcardhomepages/Loading.jsx";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/Addres" element={<Addres />} />
           <Route path="/Payment" element={<Cardinformation />} />
           <Route path="/OTP" element={<OTP />} />
+          <Route path="/Loading" element={<Loading />} />
         </Routes>
         <Footer />
       </BrowserRouter>

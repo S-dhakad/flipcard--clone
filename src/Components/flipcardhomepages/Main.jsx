@@ -3,7 +3,7 @@ import mydata from "../flipcarddata/Flipcarddata.json"
 import "./Main.css"
 import { useDispatch } from 'react-redux'
 import { Addcard } from "../Store/Createdslice";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Outlet } from "react-router-dom";
 export default function Main() {
     const [handlerapi, sethandlerapi] = useState([]);
     const dispatch = useDispatch()
@@ -175,9 +175,10 @@ export default function Main() {
 
 
 
-
+                    <Outlet />
                 </div>
             </div>
+
         </>
     );
 }

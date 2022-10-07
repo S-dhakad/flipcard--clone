@@ -1,4 +1,10 @@
 /* remove card style */
+.empty img {
+  width: 20% !important;
+  margin: auto;
+  background-color: #fb641b;
+}
+
 .cardremove {
   display: flex;
   align-items: center;

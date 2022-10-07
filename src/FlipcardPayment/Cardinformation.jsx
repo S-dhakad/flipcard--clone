@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./cardstyl.css";
+
 export default function Cardinformation() {
   const navigate = useNavigate();
   function handlesubmitdata(e) {
@@ -10,7 +11,7 @@ export default function Cardinformation() {
       left: 100,
       behavior: "smooth",
     });
-    navigate("/OTP");
+    navigate("/Loading");
   }
   return (
     <>
@@ -65,60 +66,112 @@ export default function Cardinformation() {
                   onSubmit={handlesubmitdata}
                   style={{ height: "350px" }}
                 >
-                  <div className="form-group">
-                    <label htmlFor="cc-number" className="control-label">
-                      CARD NUMBER
-                    </label>
+                  <div className="input-group flex-nowrap">
                     <input
-                      id="cc-number"
+                      type="text"
+                      className="form-control"
+                      placeholder="Name"
+                      aria-label="Name"
+                      aria-describedby="addon-wrapping"
+                    />
+                  </div>
+                  <div className="input-group flex-nowrap mt-1">
+                    <input
                       type="tel"
-                      className="input-lg form-control cc-number"
-                      placeholder=" Card Number"
-                      required
+                      inputmode="numeric"
+                      pattern="[0-9\s]{13,16}"
+                      title="Card number with 0-9 and remaing 16 digit with 0-9"
+                      className="form-control"
+                      placeholder="Card Number"
+                      aria-label="Username"
+                      aria-describedby="addon-wrapping"
                     />
                   </div>
 
-                  <div className="row">
-                    <div className="col-md-6">
-                      <div className="form-group">
-                        <label shtmlFor="cc-exp" className="control-label">
-                          CARD EXPIRY
-                        </label>
-                        <input
-                          id="cc-exp"
-                          type="tel"
-                          className="input-lg form-control cc-exp"
-                          placeholder="Card Expiry"
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    <div className="col-md-6">
-                      <div className="form-group">
-                        <label htmlFor="cc-cvc" className="control-label">
-                          CARD CVC
-                        </label>
-                        <input
-                          id="cc-cvc"
-                          type="tel"
-                          className="input-lg form-control cc-cvc"
-                          placeholder=" CARD CVC"
-                          required
-                        />
-                      </div>
+                  <div className="form-group mt-2">
+                    <label htmlFor="cc-number" className="control-label">
+                      Expiry Date
+                    </label>
+                    <div className="input-group my-3">
+                      <select
+                        required="required"
+                        className="form-select form-select-sm"
+                        aria-label=".form-select-sm example"
+                      >
+                        <option selected>01</option>
+                        <option value="1">02</option>
+                        <option value="2">03</option>
+                        <option value="3">04</option>
+                        <option value="4">05</option>
+                        <option value="5">06</option>
+                        <option value="6">07</option>
+                        <option value="7">08</option>
+                        <option value="8">09</option>
+                        <option value="9">10</option>
+                        <option value="10">11</option>
+                        <option value="11">12</option>
+                      </select>
+                      <span className="input-group-text">
+                        {" "}
+                        {"                 "}{" "}
+                      </span>
+                      <select
+                        required="required"
+                        className="form-select form-select-sm"
+                        aria-label=".form-select-sm example"
+                      >
+                        <option selected>2021</option>
+                        <option value="1">2022</option>
+                        <option value="2">2023</option>
+                        <option value="3">2024</option>
+                        <option value="4">2025</option>
+                        <option value="5">2026</option>
+                        <option value="6">2027</option>
+                        <option value="7">2028</option>
+                        <option value="8">2029</option>
+                        <option value="9">2020</option>
+                        <option value="10">2031</option>
+                        <option value="11">2032</option>
+                      </select>
                     </div>
                   </div>
 
+                  <div className="input-group flex-nowrap">
+                    <input
+                      type="tel"
+                      pattern="[0-9]{1}[0-9]{2}"
+                      title="Card CVC with 0-9 and remaing 3 digit with 0-9"
+                      className="form-control"
+                      placeholder="CVV Number"
+                      aria-label="Name"
+                      aria-describedby="addon-wrapping"
+                    />
+                  </div>
                   <div className="form-group">
                     <label htmlFor="numeric" className="control-label">
-                      CARD HOLDER NAME
+                      CARD Type
                     </label>
-                    <input
-                      type="tel"
-                      className="input-lg form-control"
-                      required
-                    />
+                    <p className="p-0 mt-2">
+                      {" "}
+                      <input
+                        type="radio"
+                        id="Credit"
+                        name="Credit"
+                        value="Credit"
+                        required="required"
+                      />
+                      <span>{"  "}</span>{" "}
+                      <label for="Credit">Credit Card</label>
+                    </p>
+                    <p className="pb-0">
+                      <input
+                        type="radio"
+                        id="Debit"
+                        name="Credit"
+                        value="Debit"
+                      />
+                      <span>{"  "}</span> <label for="Debit">Debit Card</label>
+                    </p>
                   </div>
 
                   <div className="form-group">
