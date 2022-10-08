@@ -43,7 +43,7 @@ export default function Navbar() {
 
           <div className="flipcard-Card">
             <button type="button" className="Card-design position-relative">
-              <NavLink to="/Card"> Card</NavLink>
+              <NavLink to="/Card"> Cart</NavLink>
               <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                 {selected.length}
                 <span className="visually-hidden">unread messages</span>

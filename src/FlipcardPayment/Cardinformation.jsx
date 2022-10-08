@@ -163,6 +163,7 @@ export default function Cardinformation() {
                       placeholder="CVV Number"
                       aria-label="Name"
                       aria-describedby="addon-wrapping"
+                      required
                     />
                   </div>
                   <div className="form-group">
