@@ -32,6 +32,24 @@ export default function OTP() {
 
   return (
     <>
+
+      <div className="container">
+        <ul id="progressbar-1" className="mx-0 mt-0 mb-5 px-0 pt-0 pb-4">
+          <li className="step0 active " id="step1">
+            <span style={{ marginLeft: "22px", marginTop: "12px" }}>
+              Address
+            </span>
+          </li>
+          <li className="step0 active text-center" id="step2">
+            <span>Order Summary</span>
+          </li>
+          <li className="step0 active text-muted text-end" id="step3">
+            <span style={{ marginRight: "22px" }}>Payment</span>
+          </li>
+        </ul>
+      </div>
+
+
       <div className="container">
         <div className="header">
           <div className="headerimge">

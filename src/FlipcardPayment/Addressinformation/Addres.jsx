@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Addres.css"
 export default function Addres() {
     const navigate = useNavigate();
     const [User, setuser] = useState({
@@ -30,6 +31,25 @@ export default function Addres() {
 
     return (
         <>
+            <div className="container">
+                <ul id="progressbar-1" className="mx-0 mt-0 mb-5 px-0 pt-0 pb-4">
+                    <li className="step0 " id="step1">
+                        <span style={{ marginLeft: "22px", marginTop: "12px" }}>
+                            Address
+                        </span>
+                    </li>
+                    <li className="step0  text-center" id="step2">
+                        <span>Order Summary</span>
+                    </li>
+                    <li className="step0 text-muted text-end" id="step3">
+                        <span style={{ marginRight: "22px" }}>Payment</span>
+                    </li>
+                </ul>
+            </div>
+
+
+
+
             <div className="container">
                 <h2
                     className="mx-auto text-center border-dark border-3"
