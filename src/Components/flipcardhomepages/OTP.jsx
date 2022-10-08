@@ -2,18 +2,7 @@
 import { useCallback, useEffect, useState } from "react";
 import Swal from "sweetalert2";
 
-function Loading() {
-  return (
-    <div className="container">
-      <h2 className="text-center">
-        Please wait while we are processing payment
-      </h2>
-      <div className="container text-center">
-        <img src="\assest\Loading.gif" alt="" />
-      </div>
-    </div>
-  );
-}
+
 
 export default function OTP() {
   const [timer, setTimer] = useState(60);
