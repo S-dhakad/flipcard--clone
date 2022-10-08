@@ -79,7 +79,7 @@ export default function OTP() {
               <input
                 type="text"
                 className="form-control border-0 border-bottom border border-primary"
-                autofocus=""
+                autoFocus=""
                 placeholder="Enter the OTP  "
                 required
               />
