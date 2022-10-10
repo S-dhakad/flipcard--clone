@@ -26,14 +26,14 @@ export default function Addres() {
             left: 100,
             behavior: 'smooth'
         });
-        navigate("/Payment");
+        navigate("/Ordersummer");
     }
 
     return (
         <>
             <div className="container">
                 <ul id="progressbar-1" className="mx-0 mt-0 mb-5 px-0 pt-0 pb-4">
-                    <li className="step0 " id="step1">
+                    <li className="step0 active" id="step1">
                         <span style={{ marginLeft: "22px", marginTop: "12px" }}>
                             Address
                         </span>
@@ -59,18 +59,9 @@ export default function Addres() {
                 </h2>
 
                 <div className="container text-white">
-
-
-
-
-                    <form action=" " onSubmit={handlesubmitdata}>
+                    <form onSubmit={handlesubmitdata}>
                         <div className="row my-3 justify-content-center">
-
-
-
                             <div className="col-xs-6 col-md-4 col-lg-3 mt-3">
-
-
                                 <input
                                     type="name"
                                     placeholder="Enter your name"
@@ -114,7 +105,7 @@ export default function Addres() {
                                 <input
                                     type="text"
                                     id="phone"
-                                    name="DOB"
+                                    name="pincode"
                                     className="form-control"
                                     onChange={(e) => handleChange(e)}
                                     placeholder="Enter your Pin Code"
@@ -122,14 +113,13 @@ export default function Addres() {
                                 />
                             </div>
                         </div>
-
                         {/* address and job-location */}
                         <div className="row my-3 justify-content-center">
                             <div className="col-xs-6 col-md-4 col-lg-3">
                                 <input
                                     type="text"
                                     className="form-control"
-                                    id="phone"
+                                    id="Address"
                                     onChange={(e) => handleChange(e)}
                                     name="Address"
                                     placeholder=" Flat, House no, Building Company Address"
@@ -150,14 +140,12 @@ export default function Addres() {
                             </div>
                         </div>
                         {/* Town City */}
-
                         <div className="row my-3 justify-content-center">
                             <div className="col-xs-6 col-md-4 col-lg-3">
                                 <input
                                     type="text"
-
                                     className="form-control"
-                                    id="phone"
+                                    id="town"
                                     onChange={(e) => handleChange(e)}
                                     name="Address"
                                     placeholder="Town"
@@ -172,6 +160,7 @@ export default function Addres() {
                                     onChange={(e) => handleChange(e)}
                                     name="ConfirmAddress"
                                     placeholder="City"
+                                    name="Cityname"
                                     aria-label="Last name"
                                     required
                                 />
@@ -182,7 +171,6 @@ export default function Addres() {
                                 type="submit"
                                 value=" submit now"
                                 className="btn btn-primary"
-
                             >
                                 Payment Now
                             </button>
@@ -190,9 +178,6 @@ export default function Addres() {
                     </form>
                 </div>
             </div>
-
-
-
         </>
     );
 }

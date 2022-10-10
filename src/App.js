@@ -13,6 +13,8 @@ import Footer from "./Components/Footer/Footer.jsx";
 import Card from "./Components/flipcardhomepages/Card.jsx";
 import OTP from "./Components/flipcardhomepages/OTP.jsx";
 import Loading from "./Components/flipcardhomepages/Loading.jsx";
+import Ordersummer from "./Components/flipcardhomepages/Ordersummer/Ordersummer.jsx";
+import Allpayment from "./FlipcardPayment/Allpayment/Allpayment.jsx";
 
 
 function App() {
@@ -25,6 +27,9 @@ function App() {
           <Route path="/Card" element={<Card />} />
           <Route path="/Userproductview" element={<Userproductview />} />
           <Route path="/Addres" element={<Addres />} />
+
+          <Route path="/Ordersummer" element={<Ordersummer />} />
+          <Route path="/ALLPAYMENT" element={<Allpayment />} />
           <Route path="/Payment" element={<Cardinformation />} />
           <Route path="/OTP" element={<OTP />} />
           <Route path="/Loading" element={<Loading />} />
