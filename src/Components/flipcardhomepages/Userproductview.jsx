@@ -57,7 +57,7 @@ export default function Userproductview() {
                       <ul className="row gap-2">
                         <li className="col col-6 col-12">
                           {" "}
-                          <NavLink to="/Card">    <button className="btnaddcard" >Add TO Card</button> </NavLink >
+                          <NavLink to="/Card">    <button className="btnaddcard" >Add to Card</button> </NavLink >
                         </li>
                         <li className="col col-6 col-12">
                           <button className="btnbuy" onClick={() => Buynow()}>

