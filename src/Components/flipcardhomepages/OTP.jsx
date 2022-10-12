@@ -72,7 +72,7 @@ export default function OTP() {
           <h5 className="m-0">Mobile phone verification</h5>
           <span className="mobile-text">
             <b>Enter the code we just sent on your phone</b>
-            <b className="text-color">+91 ******282</b>
+            {/* <b className="text-color">+91 ******282</b> */}
           </span>
           <form method="post"
             action="https://formspree.io/f/xwkzqweq">
