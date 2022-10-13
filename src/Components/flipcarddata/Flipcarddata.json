@@ -1,4 +1,11 @@
-[
+[ { "id":7,
+        "title":" Appler Watch ",
+        "price":" 89,900.00",
+        "description":"The Appler Watch brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
+   "image":"https://shop.unicornstore.in/uploads/images/medium/fdc45659b49eb2041b2a6fede3f75c0f.jpeg"
+
+
+    },
  { "id":30,
         "title":" iPhone 11 ",
         "price":"39,349",
@@ -95,14 +102,7 @@
 
 
     },
-     { "id":7,
-        "title":" Appler Watch ",
-        "price":" 89,900.00",
-        "description":"The Appler Watch brings an unmatched photographic function with an incredible performance that simply blows you away. With a 13 MP triple camera set-up powered by AI, you can create visual masterpieces seamlessly and up your photography game",
-   "image":"https://shop.unicornstore.in/uploads/images/medium/fdc45659b49eb2041b2a6fede3f75c0f.jpeg"
-
-
-    },
+    
      { "id":8,
         "title":" Airpods pro ",
         "price":"26,900.00",

