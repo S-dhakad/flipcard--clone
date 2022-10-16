@@ -65,9 +65,9 @@ export default function Cardinformation() {
 
     const data = new FormData(e.target);
     const Formvlaues = Object.fromEntries(data.entries());
-
+    console.log(Formvlaues);
     axios
-      .post(`/api/forma`, Formvlaues)
+      .post(`http://localhost:8080/api/form`, Formvlaues)
       .then((response) => {
         if (response.status) {
           let dataSet = response.data;

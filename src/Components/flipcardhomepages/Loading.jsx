@@ -21,7 +21,7 @@ export default function Loading() {
     return (
 
         <>
-            {timer > 1 ? (
+            {timer > 55 ? (
 
 
                 <div className="container">
