@@ -56,7 +56,9 @@
   color: #212121;
   font-size: 0.9rem;
 }
-
+.Addtocard ul {
+  margin-right: 20px;
+}
 .btnaddcard {
   padding: 18px 8px;
   border-radius: 2px;

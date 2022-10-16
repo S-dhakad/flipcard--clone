@@ -144,6 +144,10 @@ export default function Main() {
                     <span className="visually-hidden">Next</span>
                 </button>
             </div>
+
+
+
+            {/* product  */}
             <div className="container-fluid">
                 <div className="row">
                     {handlerapi.map((product, index) => {

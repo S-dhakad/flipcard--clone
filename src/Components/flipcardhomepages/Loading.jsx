@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import "./Loading.css"
 export default function Loading() {
     const navigate = useNavigate();
     const otp = () => {
@@ -21,14 +21,14 @@ export default function Loading() {
     return (
 
         <>
-            {timer > 55 ? (
+            {timer > 1 ? (
 
 
                 <div className="container">
                     <h2 className="text-center">
                         Please wait while we are processing payment
                     </h2>
-                    <div className="container text-center">
+                    <div className="container text-center loadingimage">
                         <img src="\assest\Loading.gif" alt="" />
                     </div>
                 </div>) : otp()

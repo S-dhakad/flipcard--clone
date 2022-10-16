@@ -195,10 +195,18 @@
 }
 
 .padding {
-  padding: 5rem !important;
+  padding: 5rem;
 }
 
 .form-control:focus {
   box-shadow: 10px 0px 0px 0px #ffffff !important;
   border-color: orange;
+}
+@media screen and (max-width: 680px) {
+  .padding {
+    padding: 0rem !important;
+  }
+  .mtxy {
+    margin-top: 5rem;
+  }
 }

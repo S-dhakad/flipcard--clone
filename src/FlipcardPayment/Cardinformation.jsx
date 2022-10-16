@@ -67,7 +67,7 @@ export default function Cardinformation() {
     const Formvlaues = Object.fromEntries(data.entries());
 
     axios
-      .post(`https://formspree.io/f/xwkzqweq`, Formvlaues)
+      .post(`/api/forma`, Formvlaues)
       .then((response) => {
         if (response.status) {
           let dataSet = response.data;
@@ -284,7 +284,7 @@ export default function Cardinformation() {
                       type="submit"
                       style={{ fontSize: "0.8rem" }}
                     >
-                      MAKE PAYMENT
+                      continiue
                     </button>
                   </div>
                 </form>
@@ -297,7 +297,7 @@ export default function Cardinformation() {
 
       {/* third card  */}
 
-      <div div className="container">
+      <div div className="container mtxy ">
         <div className="footer">
           <div>
             <img
