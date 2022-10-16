@@ -37,9 +37,25 @@
   width: 100px;
   border-radius: 5px;
 }
+.hide {
+  display: none;
+}
 @media screen and (max-width: 680px) {
   .cardprice {
     width: 100%;
     margin-left: 1rem;
+  }
+
+  .hide {
+    display: flex;
+  }
+  .cardbtn {
+    display: flex;
+    gap: 10px !important;
+    flex-wrap: wrap;
+    justify-content: initial;
+  }
+  .show {
+    display: none !important;
   }
 }

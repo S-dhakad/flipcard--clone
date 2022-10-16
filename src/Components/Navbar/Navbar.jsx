@@ -2,8 +2,11 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./Nav.css";
+import { AiOutlineShoppingCart } from "@react-icons/all-files/ai/AiOutlineShoppingCart";
+import { IoIosSearch } from "@react-icons/all-files/io/IoIosSearch";
 import { useDispatch } from 'react-redux'
 import { Removefirst } from "../Store/Createdslice";
+
 export default function Navbar() {
   const selected = useSelector((state) => state.counter);
   const dispatch = useDispatch()
@@ -33,10 +36,20 @@ export default function Navbar() {
               </NavLink>
             </div>
           </NavLink>
-
+          <div className="inputtag">
+            <input
+              className="form-control me-2"
+              type="search"
+              placeholder="  Search for Products , brand  and more"
+              aria-label="Search"
+            />
+          </div>
           <div className="flipcard-Card">
             <button type="button" className="Card-design position-relative">
-              <NavLink to="/Card"> Cart</NavLink>
+              <NavLink to="/Card">
+                <AiOutlineShoppingCart size={35} />
+                {/* Cart */}
+              </NavLink>
               <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                 {selected.length}
                 <span className="visually-hidden">unread messages</span>
@@ -44,14 +57,14 @@ export default function Navbar() {
             </button>
           </div>
         </div>
-        <div className="inputtag">
+        {/* <div className="inputtag">
           <input
             className="form-control me-2"
             type="search"
-            placeholder="Search"
+            placeholder="Search for Products , brand  and more"
             aria-label="Search"
           />
-        </div>
+        </div> */}
       </nav>
     </>
   );

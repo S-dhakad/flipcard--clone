@@ -15,9 +15,10 @@ export default function Card() {
     <>
       {selected.length === 1 ? (
         <div className="container">
-          <div className="row">
-            {selected.map((product, index) => {
-              return (
+
+          {selected.map((product, index) => {
+            return (
+              <div className="row">
                 <div className="cardremove" key={index}>
                   <div className="cardimge">
                     <img src={product.image} alt="" />
@@ -26,7 +27,7 @@ export default function Card() {
                     <h5>{product.title}</h5>
                     <h5>₹{product.price}</h5>
                   </div>
-                  <div className="cardbtn">
+                  <div className="cardbtn show">
                     <NavLink to="/Addres">
                       <button className="BUYNOW"> BUY NOW</button>
                     </NavLink>
@@ -38,9 +39,24 @@ export default function Card() {
                     </button>
                   </div>
                 </div>
-              );
-            })}
-          </div>
+
+                <div className="cardbtn hide">
+                  <NavLink to="/Addres">
+                    <button className="BUYNOW"> BUY NOW</button>
+                  </NavLink>
+                  <button
+                    className="REMOVE"
+                    onClick={() => REMOVE(product.id)}
+                  >
+                    REMOVE NOW
+                  </button>
+                </div>
+
+              </div>
+
+            );
+          })}
+
         </div>
       ) : (
         <div className="container">
