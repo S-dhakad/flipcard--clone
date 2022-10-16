@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/heading-has-content */
+/* eslint-disable jsx-a11y/alt-text */
+
 import React from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -56,7 +59,7 @@ export default function Ordersummer() {
                       </span>{" "}
                     </h5>
                     <p className="card-text">{product.description}</p>
-                    {/* <button type="button" className="btn btn-primary" onClick={() => dispatch(Addcard(product))} >Add to Card</button> */}
+
                   </div>
                 </div>
               </div>

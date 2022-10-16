@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import "./userproduction.css";
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";

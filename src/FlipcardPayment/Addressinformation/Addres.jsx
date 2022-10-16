@@ -160,7 +160,6 @@ export default function Addres() {
                                     onChange={(e) => handleChange(e)}
                                     name="ConfirmAddress"
                                     placeholder="City"
-                                    name="Cityname"
                                     aria-label="Last name"
                                     required
                                 />
