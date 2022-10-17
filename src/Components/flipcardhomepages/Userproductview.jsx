@@ -34,7 +34,7 @@ export default function Userproductview() {
   return (
     <>
       {selected.length === 1 ? (
-        <div>
+        <div style={{ marginTop: "5rem" }}>
           <div className="container-fluid">
             <div className="row">
               {selected.map((product, index) => {

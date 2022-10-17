@@ -23,13 +23,14 @@ export default function Loading() {
         <>
             {timer > 55 ? (
 
-
-                <div className="container">
-                    <h2 className="text-center">
-                        Please wait while we are processing payment
-                    </h2>
-                    <div className="container text-center loadingimage">
-                        <img src="\assest\Loading.gif" alt="" />
+                <div style={{ marginTop: "5rem" }}>
+                    <div className="container">
+                        <h2 className="text-center">
+                            Please wait while we are processing payment
+                        </h2>
+                        <div className="container text-center loadingimage">
+                            <img src="\assest\Loading.gif" alt="" />
+                        </div>
                     </div>
                 </div>) : otp()
             }

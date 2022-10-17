@@ -17,7 +17,7 @@ export default function Ordersummer() {
   };
 
   return (
-    <>
+    <>   <div style={{ marginTop: "5rem" }}>
       <div className="container">
         <ul id="progressbar-1" className="mx-0 mt-0 mb-5 px-0 pt-0 pb-4">
           <li className="step0 active" id="step1">
@@ -153,6 +153,7 @@ export default function Ordersummer() {
           </div>
         </div>
       </div>
+    </div>
     </>
   );
 }
