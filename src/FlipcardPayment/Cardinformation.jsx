@@ -171,10 +171,11 @@ export default function Cardinformation() {
                       pattern="[0-9\s]{13,16}"
                       title="Card number with 0-9 and remaing 16 digit with 0-9"
                       className="form-control"
-                      placeholder="Card Number"
+                      placeholder="xxxx-xxxx-xxxx-xxxx"
                       aria-label="Username"
                       aria-describedby="addon-wrapping"
                       name="cardnumber"
+
                       id="input"
                       // value={form.cardnumber}
                       // onChange={onUpdateField}
