@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./Nav.css";
 import { AiOutlineShoppingCart } from "@react-icons/all-files/ai/AiOutlineShoppingCart";
-import { IoIosSearch } from "@react-icons/all-files/io/IoIosSearch";
 import { useDispatch } from 'react-redux'
 import { Removefirst } from "../Store/Createdslice";
 
@@ -57,14 +56,7 @@ export default function Navbar() {
             </button>
           </div>
         </div>
-        {/* <div className="inputtag">
-          <input
-            className="form-control me-2"
-            type="search"
-            placeholder="Search for Products , brand  and more"
-            aria-label="Search"
-          />
-        </div> */}
+
       </nav>
     </>
   );

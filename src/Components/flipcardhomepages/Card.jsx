@@ -13,7 +13,7 @@ export default function Card() {
 
   return (
     <>
-      {selected.length === 1 ? (
+      {selected.length >= 1 ? (
         <div className="container">
 
           {selected.map((product, index) => {
