@@ -14,20 +14,34 @@ export default function Card() {
   return (
     <>
       {selected.length >= 1 ? (
-        <div className="container">
+        <div style={{ marginTop: "5rem" }}>
+          <div className="container">
 
-          {selected.map((product, index) => {
-            return (
-              <div className="row">
-                <div className="cardremove" key={index}>
-                  <div className="cardimge">
-                    <img src={product.image} alt="" />
+            {selected.map((product, index) => {
+              return (
+                <div className="row">
+                  <div className="cardremove" key={index}>
+                    <div className="cardimge">
+                      <img src={product.image} alt="" />
+                    </div>
+                    <div className="cardprice">
+                      <h5>{product.title}</h5>
+                      <h5>₹{product.price}</h5>
+                    </div>
+                    <div className="cardbtn show">
+                      <NavLink to="/Addres">
+                        <button className="BUYNOW"> BUY NOW</button>
+                      </NavLink>
+                      <button
+                        className="REMOVE"
+                        onClick={() => REMOVE(product.id)}
+                      >
+                        REMOVE NOW
+                      </button>
+                    </div>
                   </div>
-                  <div className="cardprice">
-                    <h5>{product.title}</h5>
-                    <h5>₹{product.price}</h5>
-                  </div>
-                  <div className="cardbtn show">
+
+                  <div className="cardbtn hide">
                     <NavLink to="/Addres">
                       <button className="BUYNOW"> BUY NOW</button>
                     </NavLink>
@@ -38,25 +52,13 @@ export default function Card() {
                       REMOVE NOW
                     </button>
                   </div>
+
                 </div>
 
-                <div className="cardbtn hide">
-                  <NavLink to="/Addres">
-                    <button className="BUYNOW"> BUY NOW</button>
-                  </NavLink>
-                  <button
-                    className="REMOVE"
-                    onClick={() => REMOVE(product.id)}
-                  >
-                    REMOVE NOW
-                  </button>
-                </div>
+              );
+            })}
 
-              </div>
-
-            );
-          })}
-
+          </div>
         </div>
       ) : (
         <div className="container">
